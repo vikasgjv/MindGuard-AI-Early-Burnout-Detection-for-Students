@@ -1,0 +1,174 @@
+[
+  {
+    "id": "SLEEP_LOW_01",
+    "title": "Sleep Recovery Plan",
+    "trigger_conditions": {
+      "sleep_hours_max": 5.5
+    },
+    "category": "sleep",
+    "priority": "high",
+    "recommendation": [
+      "Increase sleep by at least 1 hour tonight.",
+      "Avoid screens 30 minutes before bed.",
+      "Try a consistent bedtime routine for the next 3 days."
+    ]
+  },
+  {
+    "id": "SLEEP_MOD_01",
+    "title": "Improve Sleep Consistency",
+    "trigger_conditions": {
+      "sleep_hours_max": 6.5
+    },
+    "category": "sleep",
+    "priority": "medium",
+    "recommendation": [
+      "Try sleeping at the same time every night for the next 5 days.",
+      "Reduce caffeine intake after 2 PM.",
+      "Limit late-night screen use."
+    ]
+  },
+  {
+    "id": "STUDY_OVERLOAD_01",
+    "title": "Reduce Study Overload",
+    "trigger_conditions": {
+      "study_hours_min": 9
+    },
+    "category": "study",
+    "priority": "high",
+    "recommendation": [
+      "Limit continuous study sessions to 90 minutes.",
+      "Add 15 minute breaks between sessions.",
+      "Plan one relaxing activity today."
+    ]
+  },
+  {
+    "id": "STUDY_IMPROVE_01",
+    "title": "Improve Study Efficiency",
+    "trigger_conditions": {
+      "study_hours_min": 6
+    },
+    "category": "study",
+    "priority": "medium",
+    "recommendation": [
+      "Use the Pomodoro technique (25min study / 5min break).",
+      "Remove phone distractions during study time.",
+      "Review study progress at the end of the day."
+    ]
+  },
+  {
+    "id": "SCREEN_HIGH_01",
+    "title": "Reduce Screen Exposure",
+    "trigger_conditions": {
+      "screen_time_min": 9
+    },
+    "category": "screen",
+    "priority": "high",
+    "recommendation": [
+      "Set a 2-hour daily phone-free block.",
+      "Disable notifications during study time.",
+      "Replace evening scrolling with reading or walking."
+    ]
+  },
+  {
+    "id": "SCREEN_MOD_01",
+    "title": "Healthy Screen Habits",
+    "trigger_conditions": {
+      "screen_time_min": 6
+    },
+    "category": "screen",
+    "priority": "medium",
+    "recommendation": [
+      "Limit social media to 30 minutes per session.",
+      "Take a 10-minute break after every 1 hour of screen use.",
+      "Use blue-light filter after sunset."
+    ]
+  },
+  {
+    "id": "ACTIVITY_LOW_01",
+    "title": "Increase Physical Activity",
+    "trigger_conditions": {
+      "physical_activity_max": 0.5
+    },
+    "category": "activity",
+    "priority": "high",
+    "recommendation": [
+      "Take a 20 minute walk today.",
+      "Stretch for 5 minutes between study sessions.",
+      "Add 30 minutes of movement to your daily routine."
+    ]
+  },
+  {
+    "id": "ACTIVITY_MOD_01",
+    "title": "Maintain Healthy Activity Level",
+    "trigger_conditions": {
+      "physical_activity_max": 1
+    },
+    "category": "activity",
+    "priority": "medium",
+    "recommendation": [
+      "Add one extra movement break today.",
+      "Try light stretching before sleep.",
+      "Consider short exercise before studying."
+    ]
+  },
+  {
+    "id": "MOOD_LOW_01",
+    "title": "Emotional Reset Routine",
+    "trigger_conditions": {
+      "mood_max": 3
+    },
+    "category": "mood",
+    "priority": "high",
+    "recommendation": [
+      "Take a 15 minute break from academic work.",
+      "Talk to a friend or family member today.",
+      "Spend time outside or do a relaxing activity."
+    ]
+  },
+  {
+    "id": "MOOD_MOD_01",
+    "title": "Mood Stabilization",
+    "trigger_conditions": {
+      "mood_max": 5
+    },
+    "category": "mood",
+    "priority": "medium",
+    "recommendation": [
+      "Take a short walk or stretch break.",
+      "Listen to music or practice breathing exercises.",
+      "Try writing down one positive thing from today."
+    ]
+  },
+  {
+    "id": "BALANCE_IMPROVE_01",
+    "title": "Improve Life Balance",
+    "trigger_conditions": {
+      "study_hours_min": 7,
+      "physical_activity_max": 0.5
+    },
+    "category": "balance",
+    "priority": "high",
+    "recommendation": [
+      "Add a physical break after every 2 hours of studying.",
+      "Reduce study workload slightly today.",
+      "Schedule one relaxing activity tonight."
+    ]
+  },
+  {
+    "id": "HEALTH_OPTIMAL_01",
+    "title": "Maintain Healthy Routine",
+    "trigger_conditions": {
+      "sleep_hours_min": 7,
+      "screen_time_max": 5,
+      "physical_activity_min": 1,
+      "mood_min": 7
+    },
+    "category": "maintenance",
+    "priority": "low",
+    "recommendation": [
+      "Your habits look balanced today.",
+      "Continue maintaining your sleep and activity routine.",
+      "Keep monitoring your mood and energy levels."
+    ]
+  }
+]

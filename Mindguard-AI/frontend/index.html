@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MindGuard AI — Early Burnout Detection for Students</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="MindGuard AI detects early signs of student burnout using behavioral data and AI. Get personalized wellness recommendations and protect your mental health.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="MindGuard AI — Early Burnout Detection for Students">
+  <meta property="og:description"
+    content="AI-powered platform that detects early burnout in students. Behavioral monitoring, risk scoring, and personalized recommendations.">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%235BA8A0' width='32' height='32' rx='6'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18' font-family='system-ui'>M</text></svg>"
+    type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div id="transition-overlay" aria-hidden="true"></div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ════════════════════════════════════════════
+     ABOUT / HOME PAGE
+════════════════════════════════════════════ -->
+  <div id="about-page" class="page active" role="main">
+
+    <header>
+      <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-logo" role="button" tabindex="0" aria-label="MindGuard AI home" data-scroll="main-content">MindGuard AI</div>
+        <div class="nav-links">
+          <a href="#main-content" data-scroll="main-content" aria-current="page">Home</a>
+          <a href="#overview" data-scroll="overview">About</a>
+          <a href="#how" data-scroll="how">How It Works</a>
+          <a href="#" class="nav-cta" data-nav="login">Get Started</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="main-content" aria-label="Introduction">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-tag">AI-Powered Student Wellness</div>
+        <h1>Wellness <em>guided</em><br>by intelligence</h1>
+        <p class="hero-sub">
+          We detect early burnout in students before it becomes a crisis
+          using behavioral data, AI insights, and compassionate design.
+        </p>
+        <div class="hero-actions">
+          <button type="button" class="btn-primary" data-nav="login" aria-label="Get started with MindGuard">
+            Get Started
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
+          <a href="#how" class="btn-ghost" data-scroll="how">
+            How it works
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Floating Dashboard Preview Card -->
+      <div class="hero-ui-preview">
+        <div class="preview-card">
+          <div class="preview-header">
+            <div class="preview-avatar">A</div>
+            <div>
+              <div class="preview-name">Alex Johnson</div>
+              <div class="preview-sub">Week 3 · Monitoring Active</div>
+            </div>
+          </div>
+          <div class="preview-score-ring" id="preview-ring">
+            <span class="preview-score-val">72</span>
+          </div>
+          <div class="preview-score-label">Burnout Risk Score</div>
+          <div class="preview-metrics">
+            <div class="preview-metric">
+              <div class="preview-metric-val">6.5h</div>
+              <div class="preview-metric-label">Sleep</div>
+            </div>
+            <div class="preview-metric">
+              <div class="preview-metric-val">4.2h</div>
+              <div class="preview-metric-label">Study</div>
+            </div>
+            <div class="preview-metric">
+              <div class="preview-metric-val preview-metric-val--icon">
+                <img src="assets/icons/mood-neutral.svg" alt="Neutral mood indicator" class="ui-icon ui-icon--metric">
+              </div>
+              <div class="preview-metric-label">Mood</div>
+            </div>
+          </div>
+          <div class="preview-bar-row">
+            <div class="preview-bar-item">
+              <div class="preview-bar-name">
+                <span>Stress Level</span><span>72%</span>
+              </div>
+              <div class="preview-bar-track">
+                <div class="preview-bar-fill" style="width:0%" data-w="72"></div>
+              </div>
+            </div>
+            <div class="preview-bar-item">
+              <div class="preview-bar-name">
+                <span>Energy</span><span>45%</span>
+              </div>
+              <div class="preview-bar-track">
+                <div class="preview-bar-fill" style="width:0%; background:#E8A87C" data-w="45"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Scroll hint -->
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span class="scroll-label">Scroll</span>
+      </div>
+    </section>
+
+    <!-- ── OVERVIEW ── -->
+    <section class="overview" id="overview">
+      <div class="reveal">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">The <em>early warning</em><br>system for student minds</h2>
+        <p class="section-body">
+          MindGuard AI is an AI-powered platform that detects early signs of mental burnout and
+          fatigue in students. By analyzing daily behavioral patterns sleep duration, study time,
+          screen time, mood levels, and academic pressure we generate a dynamic burnout risk score
+          and deliver personalized recommendations to improve well-being.
+          <br><br>
+          Fully software-based and built for scale, MindGuard AI serves universities and institutions
+          while maintaining strict privacy standards.
+        </p>
+      </div>
+
+      <!-- Realistic Dashboard Mockup -->
+      <div class="overview-visual reveal">
+        <div class="dash-mockup">
+          <div class="dash-titlebar">
+            <div class="dash-dot" style="background:#FF5F57"></div>
+            <div class="dash-dot" style="background:#FEBC2E"></div>
+            <div class="dash-dot" style="background:#28C840"></div>
+            <span>MindGuard · Student Dashboard</span>
+          </div>
+          <div class="dash-body">
+            <!-- Left column: chart + metrics -->
+            <div class="dash-main">
+              <div class="dash-heading">Burnout Trend — Last 7 Days</div>
+              <div class="dash-chart">
+                <svg viewBox="0 0 260 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#5BA8A0" stop-opacity="0.35" />
+                      <stop offset="100%" stop-color="#5BA8A0" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M0 50 C20 48 40 55 60 45 C80 35 100 30 120 38 C140 46 160 40 180 32 C200 24 220 28 240 20 L260 18"
+                    fill="none" stroke="#5BA8A0" stroke-width="2.5" stroke-linecap="round" />
+                  <path
+                    d="M0 50 C20 48 40 55 60 45 C80 35 100 30 120 38 C140 46 160 40 180 32 C200 24 220 28 240 20 L260 18 L260 70 L0 70Z"
+                    fill="url(#chartGrad)" />
+                  <circle cx="0" cy="50" r="3" fill="#5BA8A0" />
+                  <circle cx="43" cy="52" r="3" fill="#5BA8A0" />
+                  <circle cx="86" cy="32" r="3" fill="#5BA8A0" />
+                  <circle cx="130" cy="40" r="3" fill="#5BA8A0" />
+                  <circle cx="173" cy="30" r="3.5" fill="#E8A87C" />
+                  <circle cx="216" cy="22" r="3" fill="#5BA8A0" />
+                  <circle cx="260" cy="18" r="3" fill="#27AE60" />
+                </svg>
+              </div>
+              <div class="dash-metrics">
+                <div class="dash-metric">
+                  <div class="dash-metric-val">6.5h</div>
+                  <div class="dash-metric-name">Avg Sleep</div>
+                  <div class="dash-metric-trend trend-down">↓ 12% from last week</div>
+                </div>
+                <div class="dash-metric">
+                  <div class="dash-metric-val">72</div>
+                  <div class="dash-metric-name">Risk Score</div>
+                  <div class="dash-metric-trend trend-down">↓ improving</div>
+                </div>
+                <div class="dash-metric">
+                  <div class="dash-metric-val">4.2h</div>
+                  <div class="dash-metric-name">Study Time</div>
+                  <div class="dash-metric-trend trend-up">↑ on track</div>
+                </div>
+                <div class="dash-metric">
+                  <div class="dash-metric-val dash-metric-val--icon">
+                    <img src="assets/icons/mood-positive.svg" alt="Positive mood indicator" class="ui-icon ui-icon--metric">
+                  </div>
+                  <div class="dash-metric-name">Today's Mood</div>
+                  <div class="dash-metric-trend trend-up">↑ better than avg</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right column: ring + activity -->
+            <div class="dash-side">
+              <div class="dash-ring-card">
+                <div class="dash-ring-title">Burnout Risk</div>
+                <svg class="dash-svg-ring" width="90" height="90" viewBox="0 0 90 90">
+                  <circle cx="45" cy="45" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="8" />
+                  <circle cx="45" cy="45" r="36" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="8"
+                    stroke-dasharray="226.2" stroke-dashoffset="61" stroke-linecap="round"
+                    transform="rotate(-90 45 45)" />
+                  <text x="45" y="50" text-anchor="middle" font-size="18" font-weight="600" fill="white"
+                    font-family="DM Serif Display, serif">72</text>
+                </svg>
+                <div class="dash-ring-val">Moderate</div>
+                <div class="dash-ring-sub">Down from 85 last week</div>
+              </div>
+              <div class="dash-activity">
+                <div class="dash-activity-title">Today's Log</div>
+                <div class="activity-pill">
+                  <div class="activity-dot" style="background:#5BA8A0"></div>
+                  <span>Slept 6.5h</span>
+                  <small>07:00</small>
+                </div>
+                <div class="activity-pill">
+                  <div class="activity-dot" style="background:#E8A87C"></div>
+                  <span>Study 3h</span>
+                  <small>10:00</small>
+                </div>
+                <div class="activity-pill">
+                  <div class="activity-dot" style="background:#27AE60"></div>
+                  <span>Mood check</span>
+                  <small>14:30</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating AI badge -->
+        <div class="dash-float-badge">
+          <img src="assets/icons/ai-chip.svg" alt="AI insight icon" class="ui-icon ui-icon--badge">
+          <div class="badge-text">
+            <strong>AI Recommendation</strong>
+            <small>Sleep 30 min earlier tonight</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROBLEM ── -->
+    <section class="problem" id="problem">
+      <div class="reveal">
+        <span class="section-tag">The Problem</span>
+        <h2 class="section-title">Burnout hides in <em>plain sight</em></h2>
+        <p class="section-body">
+          Students suffer silently while institutions lack tools to detect, intervene,
+          or prevent burnout before it causes lasting damage.
+        </p>
+      </div>
+      <div class="problem-layout">
+        <div class="problem-scene">
+          <!-- SVG connector lines -->
+          <svg class="problem-scene-svg" viewBox="0 0 460 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="rgba(91,168,160,0.4)" />
+              </marker>
+            </defs>
+            <path d="M 260 60 Q 380 100 380 160" stroke="rgba(91,168,160,0.25)" stroke-width="1.5" fill="none"
+              stroke-dasharray="6 4" marker-end="url(#arrowhead)" />
+            <path d="M 380 250 Q 300 320 200 330" stroke="rgba(91,168,160,0.25)" stroke-width="1.5" fill="none"
+              stroke-dasharray="6 4" marker-end="url(#arrowhead)" />
+          </svg>
+          <div class="problem-scene-card psc1 reveal">
+            <img src="assets/icons/problem-silent.svg" alt="Silent suffering icon" class="ui-icon ui-icon--problem">
+            <h4>Silent Suffering</h4>
+            <p>Students experience burnout silently. By the time it surfaces, academic damage is already done.</p>
+          </div>
+          <div class="problem-scene-card psc2 reveal">
+            <img src="assets/icons/problem-alert.svg" alt="Alert icon" class="ui-icon ui-icon--problem">
+            <h4>Reactive Systems</h4>
+            <p>Current wellness solutions respond only after a crisis — prevention remains an afterthought.</p>
+          </div>
+          <div class="problem-scene-card psc3 reveal">
+            <img src="assets/icons/problem-search.svg" alt="Early detection icon" class="ui-icon ui-icon--problem">
+            <h4>No Early Detection</h4>
+            <p>No continuous AI system exists to analyze behavioral patterns and trigger timely interventions.</p>
+          </div>
+        </div>
+        <div class="reveal">
+          <h2 class="section-title" style="color:white">
+            The gap <em>between crisis</em> and prevention
+          </h2>
+          <p class="section-body" style="color:rgba(255,255,255,0.55); margin-bottom:32px;">
+            Burnout doesn't arrive overnight. It builds slowly through patterns of poor sleep,
+            mounting academic pressure, and declining mood — invisible to traditional support
+            systems until it's too late.
+          </p>
+          <p class="section-body" style="color:rgba(255,255,255,0.55);">
+            MindGuard AI bridges this gap with continuous behavioral monitoring, predictive risk
+            scoring, and personalized nudges — acting weeks before a burnout crisis would typically
+            be recognized.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GOALS ── -->
+    <section class="goals" id="goals">
+      <div class="goals-inner">
+        <div>
+          <div class="reveal">
+            <span class="section-tag">Our Goals</span>
+            <h2 class="section-title">Built with <em>purpose</em>,<br>designed for impact</h2>
+          </div>
+
+          <div class="goal-group">
+            <div class="goal-group-label">Primary Goals</div>
+            <div class="goal-item">
+              <div class="goal-num">01</div>
+              <p><strong>Detect early burnout risk</strong> using behavioral data collected passively and through daily
+                check-ins.</p>
+            </div>
+            <div class="goal-item">
+              <div class="goal-num">02</div>
+              <p><strong>Provide personalized preventive recommendations</strong> tailored to each student's unique
+                patterns.</p>
+            </div>
+            <div class="goal-item">
+              <div class="goal-num">03</div>
+              <p><strong>Enable students to self-monitor</strong> their mental wellness through intuitive dashboards.
+              </p>
+            </div>
+            <div class="goal-item">
+              <div class="goal-num">04</div>
+              <p><strong>Provide institutions</strong> with anonymized, aggregated stress insights to improve campus
+                support.</p>
+            </div>
+          </div>
+
+          <div class="goal-group">
+            <div class="goal-group-label">Secondary Goals</div>
+            <div class="goal-item">
+              <div class="goal-num">05</div>
+              <p><strong>Encourage healthier routines</strong> through habit tracking and gentle daily nudges.</p>
+            </div>
+            <div class="goal-item">
+              <div class="goal-num">06</div>
+              <p><strong>Reduce burnout-related academic drop-offs</strong> by identifying and intervening early.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="goals-aside reveal">
+          <div class="goals-visual">
+            <h3>Making a Real Difference</h3>
+            <p>MindGuard AI's proactive approach reduces severe burnout incidents and measurably improves academic
+              outcomes.</p>
+            <div class="metric-row">
+              <div class="metric">
+                <span class="metric-val">3×</span>
+                <span class="metric-label">Earlier Detection</span>
+              </div>
+              <div class="metric">
+                <span class="metric-val">68%</span>
+                <span class="metric-label">Fewer Dropouts</span>
+              </div>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-label">
+                <span>Burnout Prevention</span><span>89%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" data-width="89"></div>
+              </div>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-label">
+                <span>Student Satisfaction</span><span>94%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" data-width="94"></div>
+              </div>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-label">
+                <span>AI Accuracy Score</span><span>92%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" data-width="92"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ── -->
+    <section class="how" id="how">
+      <div class="how-header reveal">
+        <span class="section-tag">The Process</span>
+        <h2 class="section-title">How MindGuard <em>works</em></h2>
+        <p style="color:var(--muted);margin-top:16px;line-height:1.7;font-size:0.95rem">
+          A three-step intelligent pipeline that transforms daily behavioral signals
+          into actionable wellness guidance.
+        </p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">
+            <span class="step-num">1</span>
+            <img src="assets/icons/step-data.svg" alt="Behavioral data collection icon" class="ui-icon ui-icon--step">
+          </div>
+          <h4>Behavioral Data Collection</h4>
+          <p>Daily check-ins capture sleep, study hours, screen time, mood, and academic pressure through a seamless
+            interface.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <span class="step-num">2</span>
+            <img src="assets/icons/step-ai.svg" alt="AI scoring icon" class="ui-icon ui-icon--step">
+          </div>
+          <h4>AI Risk Scoring</h4>
+          <p>Machine learning models analyze behavioral patterns and generate a dynamic burnout risk score updated in
+            real time.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <span class="step-num">3</span>
+            <img src="assets/icons/step-guidance.svg" alt="Guidance icon" class="ui-icon ui-icon--step">
+          </div>
+          <h4>Personalized Recommendations</h4>
+          <p>Context-aware guidance — sleep optimization, stress techniques, counseling — delivered when students need
+            it most.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="logo" role="button" tabindex="0" aria-label="Back to home" data-scroll="main-content">MindGuard AI</div>
+      <p>© 2026 MindGuard AI · Designed for Student Mental Wellness</p>
+    </footer>
+
+  </div><!-- end #about-page -->
+
+
+  <!-- ════════════════════════════════════════════
+     LOGIN PAGE
+════════════════════════════════════════════ -->
+  <div id="login-page" class="page" role="main" aria-label="Sign in">
+    <canvas id="login-canvas" aria-hidden="true"></canvas>
+
+    <div class="login-split">
+
+      <div class="login-brand">
+        <div class="login-brand-logo" role="button" tabindex="0" aria-label="Back to home" data-nav="about"
+          onclick="typeof goTo==='function'&&goTo('about')">
+          <img src="assets/icons/problem-search.svg" alt="Back to home" class="ui-icon ui-icon--back">
+          <span>MindGuard AI</span>
+        </div>
+        <div class="login-brand-center">
+          <h2>Your wellness<br><em>journey starts</em><br>here</h2>
+          <p>Join students who use MindGuard AI to protect their mental health and perform at their best.</p>
+
+          <div class="login-wellness-card">
+            <div class="wellness-row">
+              <div class="wellness-item">
+                <img src="assets/icons/wellness-sleep.svg" alt="Sleep goal icon" class="wellness-icon">
+                <div class="wellness-val">7.2h</div>
+                <div class="wellness-name">Sleep Goal</div>
+              </div>
+              <div class="wellness-item">
+                <img src="assets/icons/wellness-study.svg" alt="Study target icon" class="wellness-icon">
+                <div class="wellness-val">4h</div>
+                <div class="wellness-name">Study Target</div>
+              </div>
+              <div class="wellness-item">
+                <img src="assets/icons/wellness-stress.svg" alt="Stress level icon" class="wellness-icon">
+                <div class="wellness-val">Low</div>
+                <div class="wellness-name">Stress Level</div>
+              </div>
+            </div>
+            <div class="wellness-bar-item">
+              <div class="wellness-bar-name">
+                <span>Overall Wellness</span><span>78%</span>
+              </div>
+              <div class="wellness-bar-track">
+                <div class="wellness-bar-fill-anim" style="width:78%;background:linear-gradient(90deg,#5BA8A0,#7EC8C0)">
+                </div>
+              </div>
+            </div>
+            <div class="wellness-bar-item">
+              <div class="wellness-bar-name">
+                <span>Academic Balance</span><span>65%</span>
+              </div>
+              <div class="wellness-bar-track">
+                <div class="wellness-bar-fill-anim" style="width:65%;background:linear-gradient(90deg,#E8A87C,#F0C090)">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="login-brand-footer">© 2026 MindGuard AI · Designed for Student Mental Wellness</div>
+      </div>
+
+      <div class="login-form-panel">
+        <div class="login-tab-switch" role="tablist" aria-label="Sign in or sign up">
+          <button type="button" class="tab-btn active" id="tab-login" role="tab" aria-selected="true"
+            aria-controls="login-form-content" data-tab="login">Sign In</button>
+          <button type="button" class="tab-btn" id="tab-signup" role="tab" aria-selected="false"
+            aria-controls="login-form-content" data-tab="signup">Sign Up</button>
+        </div>
+
+        <div id="login-form-content" role="tabpanel" aria-labelledby="tab-login">
+          <div class="form-title" id="form-title">Welcome back</div>
+          <div class="form-sub" id="form-sub">Sign in to your MindGuard account</div>
+          <div id="form-error" class="form-error" role="alert" aria-live="polite" hidden></div>
+
+          <div id="signup-fields" style="display: none;">
+            <div class="form-group">
+              <label class="form-label" for="signup-name">Full Name</label>
+              <input type="text" id="signup-name" class="form-input" placeholder="Alex Johnson" autocomplete="name"
+                aria-describedby="signup-name-error">
+              <span id="signup-name-error" class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <input type="email" id="login-email" class="form-input" placeholder="you@university.edu"
+              autocomplete="email" aria-describedby="login-email-error" aria-invalid="false">
+            <span id="login-email-error" class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="login-pass">Password</label>
+            <input type="password" id="login-pass" class="form-input" placeholder="••••••••"
+              autocomplete="current-password" aria-describedby="login-pass-error password-toggle-desc"
+              aria-invalid="false">
+            <button type="button" class="input-icon" id="password-toggle" aria-label="Show password"
+              aria-pressed="false" title="Show password">
+              <span aria-hidden="true">👁</span>
+            </button>
+            <span id="login-pass-error" class="field-error" aria-live="polite"></span>
+            <span id="password-toggle-desc" class="sr-only">Toggle password visibility</span>
+          </div>
+
+          <div class="form-options" id="form-options">
+            <label class="form-checkbox">
+              <input type="checkbox" id="remember" checked aria-describedby="remember-desc">
+              <span id="remember-desc">Remember me</span>
+            </label>
+            <button type="button" class="form-forgot link-btn" id="forgot-password-btn">Forgot password?</button>
+          </div>
+
+          <button type="button" class="btn-login" id="btn-login" aria-busy="false">
+            <span id="btn-login-text">Sign In →</span>
+          </button>
+
+          <div class="form-divider"><span>or continue with</span></div>
+
+          <button type="button" class="social-btn social-btn--soon" id="google-btn"
+            aria-describedby="google-coming-desc" title="Coming soon">
+            <svg class="social-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#EA4335"
+                d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+              <path fill="#4285F4"
+                d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+              <path fill="#FBBC05"
+                d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+              <path fill="#34A853"
+                d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+            </svg>
+            Continue with Google <span class="coming-soon" id="google-coming-desc">(Coming soon)</span>
+          </button>
+        </div>
+
+        <!-- Success state -->
+        <div class="login-success" id="login-success" aria-live="polite" hidden>
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h3>You're in!</h3>
+          <p>Redirecting to your wellness dashboard...</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Forgot password modal -->
+  <div id="forgot-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="forgot-modal-title"
+    aria-describedby="forgot-modal-desc" hidden>
+    <div class="modal-backdrop" data-close="forgot"></div>
+    <div class="modal-content">
+      <h2 id="forgot-modal-title" class="modal-title">Reset password</h2>
+      <p id="forgot-modal-desc" class="modal-desc">Enter your email and we'll send you a link to reset your password.
+      </p>
+      <div class="form-group">
+        <label class="form-label" for="forgot-email">Email</label>
+        <input type="email" id="forgot-email" class="form-input" placeholder="you@university.edu" autocomplete="email">
+        <span id="forgot-email-error" class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-ghost-modal" data-close="forgot">Cancel</button>
+        <button type="button" class="btn-primary-modal" id="forgot-submit">Send reset link</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard page (post-login) -->
+  <div id="dashboard-page" class="page" role="main" aria-label="Your wellness dashboard">
+    <header class="dashboard-header">
+      <div class="dashboard-header-inner">
+        <div class="logo" role="button" tabindex="0" data-nav="about" onclick="typeof goTo==='function'&&goTo('about')">
+          MindGuard AI</div>
+        <div class="dashboard-actions">
+          <nav class="dashboard-nav" aria-label="Main">
+            <a href="#" class="dashboard-nav-link active" data-dashboard-view="home" id="nav-dashboard">Dashboard</a>
+            <a href="#" class="dashboard-nav-link" data-dashboard-view="analysis" id="nav-analysis">Analysis</a>
+            <a href="#" class="dashboard-nav-link" data-dashboard-view="profile" id="nav-profile">Profile</a>
+            <button type="button" class="btn-logout" id="dashboard-logout">Logout</button>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="dashboard-main">
+      <div id="dashboard-view-home" class="dashboard-view active">
+        <section class="dashboard-welcome">
+          <h1>Welcome to your dashboard</h1>
+          <p class="dashboard-sub" id="dashboard-welcome-sub">Complete a check-in in Analysis to generate your first
+            insights.</p>
+        </section>
+        <section class="synopsis-grid" aria-label="Synopsis">
+          <div class="dashboard-card synopsis-card">
+            <div class="synopsis-label">Current risk score</div>
+            <div class="synopsis-score"><span id="dash-score">—</span><span class="synopsis-score-suffix">/100</span>
+            </div>
+            <div class="synopsis-chip" id="dash-band">—</div>
+            <div class="synopsis-meta" id="dash-updated">No check-ins yet</div>
+          </div>
+          <div class="dashboard-card synopsis-card">
+            <div class="synopsis-label">Top driver</div>
+            <div class="synopsis-title" id="dash-driver">—</div>
+            <div class="synopsis-meta">Based on your latest inputs</div>
+          </div>
+          <div class="dashboard-card synopsis-card">
+            <div class="synopsis-label">Latest insight</div>
+            <div class="synopsis-title" id="dash-action">—</div>
+            <div class="synopsis-meta">Small changes, big impact</div>
+          </div>
+        </section>
+
+        <section class="dashboard-placeholder" aria-label="Trends and notes">
+          <div class="dashboard-card dashboard-card--wide">
+            <div class="dashboard-card-header">
+              <h2>Burnout risk trend</h2>
+              <span class="dashboard-badge" id="dash-trend-badge">Last 7 check-ins</span>
+            </div>
+            <div id="dash-chart-empty" class="analysis-placeholder">
+              <img src="assets/icons/placeholder-trend.svg" alt="Trend chart placeholder" class="ui-icon ui-icon--placeholder">
+              <p>Add at least 2 check-ins in Analysis to see your trend graph.</p>
+            </div>
+            <svg id="dash-risk-chart" class="risk-chart" viewBox="0 0 640 200" preserveAspectRatio="none" role="img"
+              aria-label="Burnout risk trend chart" hidden>
+              <path d="" id="dash-risk-line"></path>
+              <path d="" id="dash-risk-area"></path>
+            </svg>
+            <div class="chart-legend">
+              <span class="legend-dot"></span>
+              <span>Risk score</span>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <h2>Synopsis</h2>
+            <ul class="synopsis-list" id="dash-synopsis-list">
+              <li>Fill out today’s signals in <strong>Analysis</strong> to generate insights.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div id="dashboard-view-analysis" class="dashboard-view" hidden>
+        <section class="dashboard-welcome">
+          <h1>Analysis</h1>
+          <p class="dashboard-sub">Adjust sliders for today. We’ll estimate burnout risk and save a check-in.</p>
+        </section>
+        <section class="analysis-layout" aria-label="Analysis inputs and results">
+          <div class="dashboard-card dashboard-card--wide analysis-card">
+            <div class="analysis-card-head">
+              <div>
+                <h2>Today’s signals</h2>
+                <p class="dashboard-sub">Use the sliders and click <strong>Analyze & Save</strong>.</p>
+              </div>
+              <button type="button" class="btn-primary-modal analysis-save-btn" id="analysis-submit">Analyze &
+                Save</button>
+            </div>
+
+            <form id="analysis-form" class="analysis-form" autocomplete="off">
+              <div class="range-grid">
+                <div class="range-field">
+                  <div class="range-head">
+                    <label for="study-hours">Study hours/day</label>
+                    <span class="range-value"><span id="val-study-hours">4.0</span>h</span>
+                  </div>
+                  <input type="range" id="study-hours" min="0" max="12" step="0.5" value="4">
+                  <div class="range-meta"><span>0h</span><span>12h</span></div>
+                </div>
+
+                <div class="range-field">
+                  <div class="range-head">
+                    <label for="extracurricular-hours">Extracurricular hours/day</label>
+                    <span class="range-value"><span id="val-extracurricular-hours">1.0</span>h</span>
+                  </div>
+                  <input type="range" id="extracurricular-hours" min="0" max="6" step="0.5" value="1">
+                  <div class="range-meta"><span>0h</span><span>6h</span></div>
+                </div>
+
+                <div class="range-field">
+                  <div class="range-head">
+                    <label for="screen-hours">Screen time/day</label>
+                    <span class="range-value"><span id="val-screen-hours">4.0</span>h</span>
+                  </div>
+                  <input type="range" id="screen-hours" min="0" max="12" step="0.5" value="4">
+                  <div class="range-meta"><span>0h</span><span>12h</span></div>
+                </div>
+
+                <div class="range-field">
+                  <div class="range-head">
+                    <label for="physical-hours">Physical activity hours/day</label>
+                    <span class="range-value"><span id="val-physical-hours">0.5</span>h</span>
+                  </div>
+                  <input type="range" id="physical-hours" min="0" max="3" step="0.25" value="0.5">
+                  <div class="range-meta"><span>0h</span><span>3h</span></div>
+                </div>
+
+                <div class="range-field">
+                  <div class="range-head">
+                    <label for="mood">Mood</label>
+                  </div>
+                  <select id="mood" class="analysis-select">
+                    <option value="excellent">Excellent (9/10)</option>
+                    <option value="good">Good (7/10)</option>
+                    <option value="average" selected>Average (5/10)</option>
+                    <option value="bad">Bad (3/10)</option>
+                  </select>
+                </div>
+
+                <div class="range-field">
+                  <div class="range-head">
+                    <label for="sleep-hours">Sleep time/day</label>
+                    <span class="range-value"><span id="val-sleep-hours">7.0</span>h</span>
+                  </div>
+                  <input type="range" id="sleep-hours" min="0" max="8" step="0.5" value="7">
+                  <div class="range-meta"><span>0h</span><span>8h</span></div>
+                </div>
+              </div>
+            </form>
+
+            <div class="analysis-note">
+              Saved check-ins appear on your Dashboard graph.
+            </div>
+          </div>
+
+          <div class="dashboard-card analysis-output">
+            <h2>Result</h2>
+            <div id="analysis-empty" class="analysis-placeholder">
+              <img src="assets/icons/placeholder-analysis.svg" alt="Analysis placeholder" class="ui-icon ui-icon--placeholder">
+              <p>Move sliders and click <strong>Analyze & Save</strong> to get a score.</p>
+            </div>
+            <div id="analysis-result" hidden>
+              <div class="analysis-score-row">
+                <div class="analysis-score-ring" id="analysis-score-ring">
+                  <span class="analysis-score-val" id="analysis-score-val">—</span>
+                </div>
+                <div class="analysis-score-meta">
+                  <div class="synopsis-chip" id="analysis-band">—</div>
+                  <div class="synopsis-meta" id="analysis-summary">—</div>
+                </div>
+              </div>
+              <h3 class="analysis-subtitle">Recommendations</h3>
+              <ul class="analysis-list" id="analysis-recos"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="dashboard-view-profile" class="dashboard-view" hidden>
+        <section class="dashboard-welcome">
+          <h1>Profile</h1>
+          <p class="dashboard-sub">Your account and wellness settings.</p>
+        </section>
+        <section class="profile-section">
+          <div class="dashboard-card profile-card">
+            <div class="profile-header">
+              <div class="profile-avatar" id="profile-avatar">—</div>
+              <div class="profile-info">
+                <h2 class="profile-name" id="profile-name">—</h2>
+                <p class="profile-email" id="profile-email">—</p>
+                <span class="dashboard-badge">Active</span>
+              </div>
+            </div>
+            <div class="profile-details">
+              <div class="profile-row">
+                <span class="profile-label">Email</span>
+                <span class="profile-value" id="profile-email-value">—</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Member since</span>
+                <span class="profile-value" id="profile-member-since">—</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Check-ins completed</span>
+                <span class="profile-value" id="profile-checkins">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-card">
+            <h2>Wellness goals</h2>
+            <p>Sleep target: 7+ hours · Study balance: 4h · We'll help you track these.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
