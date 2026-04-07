@@ -224,4 +224,7 @@ MIT License — see `LICENSE` for details.
 * Email: vikasgjv@gmail.com
 * LinkedIn: linkedin.com/in/vikas-gj-979251296
 
+
+⭐ Star this repo if you find it useful!
+
 > © 2026 MindGuard AI · Designed for Student Mental Wellness
