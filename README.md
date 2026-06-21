@@ -1,4 +1,4 @@
-# MindGuard AI — Early Burnout Detection for Students
+# MindGuard AI — Early Burnout Detection for Student
 
 > Harnessing Behavioral Analytics for Student Wellbeing
 
